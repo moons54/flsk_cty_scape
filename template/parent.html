@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<html>
+	<head>
+   <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Projet 6 </title>
+    <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Parent and Child Templates in Flask - {% block title %}{% endblock %}</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link type="text/css"  rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"/>
+		<script type="text/javascript" href="{{ url_for('static', filename='js/sample.js') }}"></script>
+		{% block head %}			
+		{% endblock %}
+	</head>
+<body>
+
+	{% include "header.html" %}
+
+
+		
+		<div class="col-s-10">
+		
+			{% block content %}{% endblock %}
+		
+		</div>
+		
+	</div>
+	
+	{% include "footer.html" %}
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
