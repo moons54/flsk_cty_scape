@@ -1,0 +1,55 @@
+<html>
+<head>  
+    {% extends "parent.html" %}
+ {% block title %}Presentation {% endblock %}
+</head>
+<body>
+  {% block content %}
+      <div class="row">
+         <div class="col-md-3">
+          
+            <div class="card bg-light">
+              <div class="card-header"'>Photo 1 de test circulation aachen </div>
+                 <a href="{{ url_for('prediction',image_id=['0'])  }}"> <img src={{ url1}} class="card-img-top" height="250px" width="250px"></a>
+                      <div class="card-body">
+                      <p class="card-text">Observation : Images de grand taille 1024X2048</p>
+                     </div>
+                 </div>
+            </div>
+           <div class="col-md-3">
+              <div class="card bg-light">
+                <div class="card-header">Photo 2 de test circulation bochun</div>
+                  <a href="{{ url_for('prediction',image_id=['1'])  }}">
+                  <img src={{ url2}} class="card-img-top" height="250px" width="250px"></a>
+                      <div class="card-body">
+                      <p class="card-text">Observation : Images de grand taille 1024X2048</p>
+                      </div>
+                  </div>
+                
+          </div>
+          
+            <div class="col-md-3">
+              <div class="card bg-light">
+       <div class="card-header">Photo 3 de test circulation bremen</div>
+       <a href="{{ url_for('prediction',image_id=['2'])  }}"><img src={{ url3}} class="card-img-top" height="250px" width="250px"></a>
+                      <div class="card-body">
+                      <p class="card-text">Observation : Images de grand taille 1024X2048</p>
+                      </div>
+                </div>
+        </div>
+         <div class="col-md-3">
+            <div class="card bg-light">
+              
+               <div class="card-header">Photo 4 de test circulation cologne</div>
+               <a href="{{ url_for('prediction',image_id=['3'])  }}"> <img src={{ url4}} class="card-img-top" height="250px" width="250px"></a>
+                      <div class="card-body">
+                      <p class="card-text"></p>Observation : Images de grand taille 1024X2048</p>
+                     </div>
+                </div>
+            </div>
+          </div>
+    </div>
+</div>
+  {% endblock %}
+</body>
+</html>

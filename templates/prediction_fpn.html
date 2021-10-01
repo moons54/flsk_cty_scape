@@ -1,0 +1,48 @@
+<html>
+<head>  
+    {% extends "parent.html" %}
+ {% block title %}Presentation {% endblock %}
+</head>
+<body>
+  {% block content %}
+      <div class="row">
+        <div class="col-md-3">
+          
+          <div class="card bg-light">
+            <div class="card-header">Image initiale</div>
+               <img src={{ url3}} class="card-img-top" height="250px" width="250px"></a>
+                    <div class="card-body">
+                    <p class="card-text">Observation : Image reduite et normalisée</p>
+                   </div>
+               </div>
+          </div>
+         <div class="col-md-3">
+          
+            <div class="card bg-light">
+              <div class="card-header">Prediction du model t</div>
+                 <img src={{ url1}} class="card-img-top" height="250px" width="250px"></a>
+                      <div class="card-body">
+                      <p class="card-text">Observation : Images classés en 8 catégories</p>
+                     </div>
+                 </div>
+            </div>
+          
+           
+              <div class="col-md-3">
+              <div class="card bg-light">
+                
+                <div class="card-header">Mask de test </div>
+                    <img src={{ url2}} class="card-img-top" height="250px" width="250px"><a href="{{ url_for('.model') }}"></a>
+                      <div class="card-body">
+                      <p class="card-text">Observation : image reduite</p>
+                      </div>
+                  </div>
+                
+          </div>
+          
+            
+    </div>
+</div>
+  {% endblock %}
+</body>
+</html>
