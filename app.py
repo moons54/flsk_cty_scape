@@ -48,6 +48,12 @@ def model():
 
 @app.route('/<int:image_id>')
 def prediction(image_id):
+    batch_size = 20
+    data_sample = 3000
+    steps = data_sample//batch_size
+    img_height, img_width = 256, 256
+    x_min = (128 - img_width) // 2
+    y_min = (128 - img_height) // 2
     image_list, mask_list = listImg_Mask('static/image','static/mask')
     it = img_to_array(load_img(f'{image_list[image_id]}', target_size=(img_height, img_width)))/255.
     it_comp = img_to_array(load_img(f'{mask_list[image_id]}', target_size=(img_height, img_width), color_mode='grayscale'))/255.
@@ -95,6 +101,12 @@ def prediction(image_id):
 
 @app.route('/<int:image_id>')
 def prediction_fpn(image_id):
+    batch_size = 20
+    data_sample = 3000
+    steps = data_sample//batch_size
+    img_height, img_width = 256, 256
+    x_min = (128 - img_width) // 2
+    y_min = (128 - img_height) // 2
     image_list, mask_list = listImg_Mask('static/image','static/mask')
     it = img_to_array(load_img(f'{image_list[image_id]}', target_size=(img_height, img_width)))/255.
     it_comp = img_to_array(load_img(f'{mask_list[image_id]}', target_size=(img_height, img_width), color_mode='grayscale'))/255.

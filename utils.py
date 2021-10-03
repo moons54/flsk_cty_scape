@@ -19,13 +19,7 @@ def round_clip_0_1(x, **kwargs):
 
 
 def get_validation_augmentation():
-    batch_size = 20
-    data_sample = 3000
-    steps = data_sample//batch_size
-    img_height, img_width = 256, 256
-    x_min = (128 - img_width) // 2
-    y_min = (128 - img_height) // 2
-    
+     
     """Add paddings to make image shape divisible by 32"""
     test_transform = [
         # A.PadIfNeeded(384, 480)
