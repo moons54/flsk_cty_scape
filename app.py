@@ -8,6 +8,10 @@ import requests
 from PIL import Image
 import numpy as np
 app = Flask(__name__)
+import urllib.request
+import json
+import os
+import ssl
 
 
 @app.route("/")
@@ -44,6 +48,7 @@ def model():
 
 @app.route('/<int:image_id>')
 def prediction(image_id):
+    image_list, mask_list = listImg_Mask('static/image','static/mask')
     it = img_to_array(load_img(f'{image_list[image_id]}', target_size=(img_height, img_width)))/255.
     it_comp = img_to_array(load_img(f'{mask_list[image_id]}', target_size=(img_height, img_width), color_mode='grayscale'))/255.
     trs = get_validation_augmentation() #training_augmentation()
@@ -90,6 +95,7 @@ def prediction(image_id):
 
 @app.route('/<int:image_id>')
 def prediction_fpn(image_id):
+    image_list, mask_list = listImg_Mask('static/image','static/mask')
     it = img_to_array(load_img(f'{image_list[image_id]}', target_size=(img_height, img_width)))/255.
     it_comp = img_to_array(load_img(f'{mask_list[image_id]}', target_size=(img_height, img_width), color_mode='grayscale'))/255.
     trs = get_validation_augmentation() #training_augmentation()
