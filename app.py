@@ -2,6 +2,7 @@ import flask
 from flask import Flask, render_template, jsonify
 import tempfile, os, glob, re
 import json 
+import matplotlib as plt
 from keras.preprocessing.image import load_img 
 import requests
 from PIL import Image
