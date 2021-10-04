@@ -13,5 +13,4 @@ opencv-python-headless
 ipython
 matplotlib
 tqdm
-glob
 os
