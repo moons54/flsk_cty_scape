@@ -1,1 +1,17 @@
 Flask>=1.0,<=1.1.2
+numpy
+flask
+pillow
+gunicorn
+joblib
+scikit-learn
+dill
+requests==2.22.0
+tensorflow<=2.6.0
+segmentation_models
+opencv-python-headless
+ipython
+matplotlib
+tqdm
+glob
+os
