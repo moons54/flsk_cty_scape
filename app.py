@@ -98,8 +98,9 @@ def prediction(image_id):
         # Print the headers - they include the requert ID and the timestamp, which are useful for debugging the failure
         #print(error.info())
         #print(json.loads(error.read().decode("utf8", 'ignore')))
+    
     pred = eval(result.decode("utf-8"))
-    pred =  json.loads(pred)
+    #pred =  json.loads(pred)
     vis = np.array(pred['result'][0])
     print(vis.shape) 
     import matplotlib.pyplot as plt
@@ -138,7 +139,7 @@ def prediction_fpn(image_id):
     try:
         response = urllib.request.urlopen(req)
 
-        result = response.read()
+        result1 = response.read()
         #print(result)
     except urllib.error.HTTPError as error:
         print("The request failed with status code: " + str(error.code))
@@ -146,8 +147,8 @@ def prediction_fpn(image_id):
         # Print the headers - they include the requert ID and the timestamp, which are useful for debugging the failure
         #print(error.info())
         #print(json.loads(error.read().decode("utf8", 'ignore')))
-    pred = eval(result.decode("utf-8"))
-    pred =  json.loads(pred)
+    pred = eval(result1.decode("utf-8"))
+    #pred =  json.loads(pred)
     vis = np.array(pred['result2'][0])
     print(vis.shape) 
     import matplotlib.pyplot as plt
