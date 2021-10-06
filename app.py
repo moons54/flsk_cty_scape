@@ -144,7 +144,6 @@ def prediction_fpn(image_id):
     except urllib.error.HTTPError as error:
         print("The request failed with status code: " + str(error.code))
 
-        # Print the headers - they include the requert ID and the timestamp, which are useful for debugging the failure
         #print(error.info())
         #print(json.loads(error.read().decode("utf8", 'ignore')))
     pred = eval(result1.decode("utf-8"))
