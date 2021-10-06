@@ -79,8 +79,9 @@ def prediction(image_id):
     body = str.encode(json.dumps(dta))
 
     
-    url = 'http://40.125.114.201:80/api/v1/service/aks-service-appinsights/score'
-    api_key = 'ZqWb8Vc4YstSyEeCzhO78mpETSs6pYya' # Replace this with the API key for the web service
+    url = 'http://525d52a6-f450-42e0-9788-c8c9323864e2.westus2.azurecontainer.io/score'
+    api_key = '7rd7ddSe0nK+=DtBCk/BK6xlu24eai1E'
+    # Replace this with the API key for the web service
     headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
 
 
@@ -127,8 +128,9 @@ def prediction_fpn(image_id):
 
     body = str.encode(json.dumps(dta))
 
-    url = 'http://40.125.114.201:80/api/v1/service/aks-service-appinsights/score'
-    api_key = 'ZqWb8Vc4YstSyEeCzhO78mpETSs6pYya' # Replace this with the API key for the web service
+    url = 'http://525d52a6-f450-42e0-9788-c8c9323864e2.westus2.azurecontainer.io/score'
+    api_key = '7rd7ddSe0nK+=DtBCk/BK6xlu24eai1E'
+    # Replace this with the API key for the web service
     headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
 
     req = urllib.request.Request(url, body, headers)
