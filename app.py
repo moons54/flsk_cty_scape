@@ -149,7 +149,7 @@ def prediction_fpn(image_id):
     pred = eval(result1.decode("utf-8"))
     #pred =  json.loads(pred)
     vis = np.array(pred['result2'][0])
-    print(vis.shape) 
+    #print(vis.shape) 
     import matplotlib.pyplot as plt
     plt.imsave('static/prediction/out1.png', vis[:,:,:3], cmap='nipy_spectral_r')
     plt.imsave('static/prediction/out2.png', test_mask, cmap='nipy_spectral_r')
