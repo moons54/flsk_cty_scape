@@ -78,9 +78,11 @@ def prediction(image_id):
 
     body = str.encode(json.dumps(dta))
 
+    
     url = 'http://40.125.114.201:80/api/v1/service/aks-service-appinsights/score'
     api_key = 'ZqWb8Vc4YstSyEeCzhO78mpETSs6pYya' # Replace this with the API key for the web service
     headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
+
 
     req = urllib.request.Request(url, body, headers)
 
@@ -144,7 +146,7 @@ def prediction_fpn(image_id):
         #print(json.loads(error.read().decode("utf8", 'ignore')))
     pred = eval(result.decode("utf-8"))
     pred =  json.loads(pred)
-    vis = np.array(pred['result'][0])
+    vis = np.array(pred['result2'][0])
     print(vis.shape) 
     import matplotlib.pyplot as plt
     plt.imsave('static/prediction/out1.png', vis[:,:,:3], cmap='nipy_spectral_r')
