@@ -133,7 +133,7 @@ def prediction_fpn(image_id):
     api_key = '7rd7ddSe0nK+=DtBCk/BK6xlu24eai1E'
     # Replace this with the API key for the web service
     headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
-
+    #modif urlib
     req = urllib.request.Request(url, body, headers)
 
     try:
