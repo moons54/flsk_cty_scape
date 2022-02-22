@@ -206,5 +206,6 @@ def listImg_Mask(path_image,path_masks):
   mask_list = [f for f in glob.iglob(os.path.join(path_masks, "*.png"))]
   image_list.sort()
   mask_list.sort()
+    
  # print(f'. . . . .Number of images: {len(image_list)}\n. . . . .Number of masks: {len(mask_list)}')
   return image_list,mask_list
